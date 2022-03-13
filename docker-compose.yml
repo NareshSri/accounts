@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  accounts:
+    image: npamula3414/accounts:latest
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - npamula3414-network
+    
+  loans:
+    image: npamula3414/loans:latest
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - npamula3414-network
+    
+  cards:
+    image: npamula3414/cards:latest
+    mem_limit: 700m
+    ports:
+      - "2021:2021"
+    networks:
+      - npamula3414-network
+    
+networks:
+  npamula3414-network:
